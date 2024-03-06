@@ -1,0 +1,13 @@
+flask
+pyarrow
+pandas
+transformers
+langchain 
+huggingface_hub  
+lancedb 
+rank_bm25 
+sentence-transformers
+bitsandbytes
+accelerate
+langchainhub
+llama_cpp_python -C cmake.args="-DLLAMA_CUBLAS=on"

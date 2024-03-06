@@ -1,0 +1,10 @@
+# images: https://hub.docker.com/_/python/tags?page=1&name=3.11
+FROM python:3.11.8-bullseye
+
+# arbitrary directory name, inside the container
+WORKDIR /app
+
+# copy and install requirements, important to cache pip dependencies in case of future rebuilds
+COPY requirements.txt /app/requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt

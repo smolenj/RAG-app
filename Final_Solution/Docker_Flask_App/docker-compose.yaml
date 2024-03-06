@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  chatmaja:
+    image: chatmaja/v1
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models  # models will be downloaded here
+      - ./db:/app/db          # LanceDB will store it's files here
+
+      # csv with chunks based on 100 articles (412 chunks)
+      # - ../data/preprocessed_data/master_without_embeddings_first_100.csv:/app/data.csv:ro
+
+      # csv with chunks based on all articles (214381 chunks), takes a loong time to embed on CPU
+      - ../data/preprocessed_data/master_without_embeddings_all.csv:/app/data.csv:ro

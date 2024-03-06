@@ -1,0 +1,15 @@
+Flask==3.0.2
+pyarrow==15.0.0
+pandas==2.2.1
+transformers==4.38.2
+langchain==0.1.10
+huggingface-hub==0.21.3
+lancedb==0.6.1
+rank-bm25==0.2.2
+sentence-transformers==2.5.1
+bitsandbytes==0.42.0
+accelerate==0.27.2
+langchainhub==0.1.14
+llama_cpp_python==0.2.55 -C cmake.args="-DLLAMA_CUBLAS=on"
+gradio==4.19.2
+openpyxl==3.1.2
